@@ -65,7 +65,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v1.4.4
         with:
-          node-version: '14'
+          node-version: '16'
 
       - name: Restore protected files
         uses: ./.github/actions/blocked-files-checkout
