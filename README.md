@@ -45,7 +45,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
       - [5. Implemente a lógica para preencher as opções do campo "Moedas" buscando as siglas da API:](#5-implemente-a-lógica-para-preencher-as-opções-do-campo-moedas-buscando-as-siglas-da-api)
     - [Tabela de Gastos](#tabela-de-gastos)
       - [6. Desenvolva uma tabela com os gastos contendo as seguintes características:](#6-desenvolva-uma-tabela-com-os-gastos-contendo-as-seguintes-características)
-      - [7. Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação](#7-implemente-a-lógica-para-que-a-tabela-seja-alimentada-pleo-estado-da-aplicação)
+      - [7. Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação](#7-implemente-a-lógica-para-que-a-tabela-seja-alimentada-pelo-estado-da-aplicação)
       - [8. Crie um botão para deletar uma despesa da tabela contendo as seguintes características:](#8-crie-um-botão-para-deletar-uma-despesa-da-tabela-contendo-as-seguintes-características)
     - [Bônus](#bônus)
       - [9. Crie um botão para editar uma despesa da tabela contendo as seguintes características:](#9-crie-um-botão-para-editar-uma-despesa-da-tabela-contendo-as-seguintes-características)
@@ -172,7 +172,8 @@ Nessa aplicação você deverá **obrigatoriamente** utilizar o seguinte formato
 
 **Observações Importantes:**
 - Devido a estrutura que o avaliador utiliza para realizar os testes, é necessário que o seu Redux esteja configurado, ou seja, a store e os reducers estejam criados e conectados.
-- Também é necessário que o `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo index.js e não no `<App />`.
+- É necessário que o `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo index.js e não no `<App />`.
+- Também será necessário a instalação da biblioteca PropTypes utilizando o comando `npm install prop-types`.
 
 Outra coisa importante: devido a estrutura que o avaliador utiliza para realizar os testes, é **necessário** que o seu `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo `index.js` e **não** no `<App />`.
 
@@ -420,7 +421,9 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
     Atenção nesse ponto: você deverá fazer uma requisição para API e buscar a cotação no momento que o botão de `Adicionar despesa` for apertado. Para isso você deve utilizar um thunk
     ```
 
-    * Após adicionar a despesa, atualize a soma total das despesas. Essa informação deve ficar no header dentro do elemento com `data-testid="total-field"`
+    * Após adicionar a despesa, atualize a soma total das despesas (utilize a chave `ask` para realizar essa soma). Essa informação deve ficar no header dentro do elemento com `data-testid="total-field"`
+
+    * Após adicionar a despesa, resete o valor do campo `valor da despesa`
 
     As despesas salvas no Redux ficarão com um formato semelhante ao seguinte:
     ```
@@ -549,11 +552,11 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
 
 #### 6. Desenvolva uma tabela com os gastos contendo as seguintes características:
 
-  * A tabela deve possuir um cabeçalho **exatamente** com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido e Moeda de conversão
+  * A tabela deve possuir um cabeçalho **exatamente** com os campos `Descrição`, `Tag`, `Método de pagamento`, `Valor`, `Moeda`, `Câmbio utilizado`, `Valor convertido`, `Moeda de conversão` e `Editar/Excluir`
     
 **O que será verificado:**
 
-- A tabela deve possuir um cabeçalho com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido e Moeda de conversão.
+- A tabela deve possuir um cabeçalho **exatamente** com os campos `Descrição`, `Tag`, `Método de pagamento`, `Valor`, `Moeda`, `Câmbio utilizado`, `Valor convertido`, `Moeda de conversão` e `Editar/Excluir`
 
 #### 7. Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação
 
@@ -573,7 +576,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
 
 #### 8. Crie um botão para deletar uma despesa da tabela contendo as seguintes características:
 
-    ![image](btnExcluir.gif)
+  ![image](btnExcluir.gif)
 
   * O botão deve ser o último item da linha da tabela e deve possuir `data-testid="delete-btn"`.
 
@@ -589,7 +592,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
 
 #### 9. Crie um botão para editar uma despesa da tabela contendo as seguintes características:
 
-    ![image](btnEditar.gif)
+  ![image](btnEditar.gif)
 
   * O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid="edit-btn"`
 
@@ -598,6 +601,8 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
     * O formulário deverá ter os mesmos `data-testid` do formulário de adicionar despesa. Você pode reaproveitá-lo.
 
     * O botão para submeter a despesa para edição deverá conter **exatamente** o texto "Editar despesa"
+
+    * Após a edição da despesa a ordem das despesas na tabela precisa ser mantida.
 
     **Atenção**: o câmbio utilizado na edição deve ser o mesmo do cálculo feito na adição do gasto.
 
