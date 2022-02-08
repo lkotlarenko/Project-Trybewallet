@@ -170,6 +170,10 @@ Nessa aplicação você deverá **obrigatoriamente** utilizar o seguinte formato
 
 É importante respeitar esse formato para que o avaliador funcione corretamente. Você pode adicionar novos campos ao seu estado global, mas essa estrutura básica deve se manter. Por exemplo, você pode adicionar uma propriedade `isFetching` no seu estado. Mas você **não** pode salvar as despesas em uma chave diferente de `wallet.expenses`.
 
+**Observações Importantes:**
+- Devido a estrutura que o avaliador utiliza para realizar os testes, é necessário que o seu Redux esteja configurado, ou seja, a store e os reducers estejam criados e conectados.
+- Também é necessário que o `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo index.js e não no `<App />`.
+
 Outra coisa importante: devido a estrutura que o avaliador utiliza para realizar os testes, é **necessário** que o seu `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo `index.js` e **não** no `<App />`.
 
 ## Linter
@@ -287,6 +291,7 @@ Caso queira avaliar apenas um tópico do requisito, você também pode usar o `.
 
 :warning: **Os gifs são meramente ilustrativos para visualizar o fluxo da aplicação, os nomes devem seguir os requisitos e não o gif.** :warning:
 
+:warning: **Obs.: Lembre-se de olhar a seção [Como desenvolver](#como-desenvolver) para entender como configurar a aplicação para desenvolver os requisitos.** :warning:
 ## Lista de requisitos
 
 ### Página de Login
