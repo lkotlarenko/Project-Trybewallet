@@ -223,7 +223,7 @@ O retorno desse endpoint será algo no formato:
      "USD": {
        "code":"USD",
        "codein":"BRL",
-       "name":"Dólar Comercial",
+       "name":"Dólar Americano/Real Brasileiro",
        "high":"5.6689",
        "low":"5.6071",
        "varBid":"-0.0166",
