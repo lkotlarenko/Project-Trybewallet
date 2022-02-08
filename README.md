@@ -423,7 +423,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
 
     * Após adicionar a despesa, atualize a soma total das despesas (utilize a chave `ask` para realizar essa soma). Essa informação deve ficar no header dentro do elemento com `data-testid="total-field"`
 
-    * Após adicionar a despesa, resete o valor do campo `valor da despesa`
+    * Após adicionar a despesa, limpe o valor do campo `valor da despesa`
 
     As despesas salvas no Redux ficarão com um formato semelhante ao seguinte:
     ```
