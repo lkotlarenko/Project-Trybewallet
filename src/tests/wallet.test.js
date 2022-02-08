@@ -279,7 +279,7 @@ describe('8 - Crie um botão para deletar uma despesa da tabela contendo as segu
     expect(screen.getByRole('cell', { name: 'Vinte euros' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: 'Trabalho' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: 'Dinheiro' })).toBeInTheDocument();
-    expect(screen.getByRole('cell', { name: '20' })).toBeInTheDocument();
+    expect(screen.getByRole('cell', { name: '20.00' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: 'Euro' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: '6.57' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: '131.37' })).toBeInTheDocument();
