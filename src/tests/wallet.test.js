@@ -241,7 +241,7 @@ describe('7 - Implemente a lógica para que a tabela seja alimentada pelo estado
     expect(screen.getAllByRole('cell', { name: 'Dez dólares' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: 'Lazer' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: 'Cartão de crédito' })[0]).toBeInTheDocument();
-    expect(screen.getAllByRole('cell', { name: '10' })[0]).toBeInTheDocument();
+    expect(screen.getAllByRole('cell', { name: '10.00' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: 'Dólar Comercial' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: '5.58' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: '55.75' })[0]).toBeInTheDocument();
@@ -250,7 +250,7 @@ describe('7 - Implemente a lógica para que a tabela seja alimentada pelo estado
     expect(screen.getAllByRole('cell', { name: 'Vinte euros' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: 'Trabalho' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: 'Dinheiro' })[0]).toBeInTheDocument();
-    expect(screen.getAllByRole('cell', { name: '20' })[0]).toBeInTheDocument();
+    expect(screen.getAllByRole('cell', { name: '20.00' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: 'Euro' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: '6.57' })[0]).toBeInTheDocument();
     expect(screen.getAllByRole('cell', { name: '131.37' })[0]).toBeInTheDocument();
@@ -279,7 +279,7 @@ describe('8 - Crie um botão para deletar uma despesa da tabela contendo as segu
     expect(screen.getByRole('cell', { name: 'Vinte euros' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: 'Trabalho' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: 'Dinheiro' })).toBeInTheDocument();
-    expect(screen.getByRole('cell', { name: '20' })).toBeInTheDocument();
+    expect(screen.getByRole('cell', { name: '20.00' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: 'Euro' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: '6.57' })).toBeInTheDocument();
     expect(screen.getByRole('cell', { name: '131.37' })).toBeInTheDocument();
