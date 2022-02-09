@@ -175,8 +175,6 @@ Nessa aplicação você deverá **obrigatoriamente** utilizar o seguinte formato
 - É necessário que o `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo index.js e não no `<App />`.
 - Também será necessário a instalação da biblioteca PropTypes utilizando o comando `npm install prop-types`.
 
-Outra coisa importante: devido a estrutura que o avaliador utiliza para realizar os testes, é **necessário** que o seu `<Provider />` e o seu `<BrowserRouter />` estejam no arquivo `index.js` e **não** no `<App />`.
-
 ## Linter
 
 Para garantir a qualidade do código, vamos utilizar neste projeto o linter ESLint. Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção! Para rodar o *linter* localmente no projeto, execute o comando abaixo: 
@@ -437,7 +435,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
       "exchangeRates": {
         "USD": {
           "code": "USD",
-          "name": "Dólar Comercial",
+          "name": "Dólar Americano",
           "ask": "5.6208",
           ...
         },
@@ -562,7 +560,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
 
 * A tabela deve ser alimentada pelo estado da aplicação, que estará disponível na chave ***expenses*** que vem do reducer `wallet`.
 
-    * O campo de Moeda e Moeda de Conversão deverão conter o nome da moeda. Portanto, ao invés de 'USD' ou 'EUR', deve conter "Dólar Comercial" e "Euro", respectivamente
+    * O campo de Moeda e Moeda de Conversão deverão conter o nome da moeda. Portanto, ao invés de 'USD' ou 'EUR', deve conter "Dólar Americano" e "Euro", respectivamente
 
     * Por padrão, o elemento que exibe a 'Moeda de conversão' deverá ser sempre 'Real'.
 
@@ -602,7 +600,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas, e que t
 
     * O botão para submeter a despesa para edição deverá conter **exatamente** o texto "Editar despesa"
 
-    * Após a edição da despesa a ordem das despesas na tabela precisa ser mantida.
+    * Após a edição da despesa, a ordem das despesas na tabela precisa ser mantida.
 
     **Atenção**: o câmbio utilizado na edição deve ser o mesmo do cálculo feito na adição do gasto.
 
