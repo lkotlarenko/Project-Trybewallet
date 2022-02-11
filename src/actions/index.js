@@ -1,4 +1,4 @@
-import { USER_LOGIN, GET_CURRENCIES, SET_EXPENSES } from './actionTypes';
+import { USER_LOGIN, GET_CURRENCIES, SET_EXPENSES, UPDATE_EXPENSES } from './actionTypes';
 import fetchData from '../api/currency';
 
 export const getLogin = (email) => ({
@@ -38,3 +38,8 @@ export const addExpenses = (expenses) => async (dispatch) => {
     console.error(error);
   }
 };
+
+export const updateExpenses = (updatedExpenses) => ({
+  type: UPDATE_EXPENSES,
+  updatedExpenses,
+});

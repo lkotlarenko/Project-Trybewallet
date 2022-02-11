@@ -14,7 +14,7 @@ class InputField extends React.Component {
           value={ value }
           type={ type }
           onChange={ onChange }
-          required
+          min="0"
         />
       </label>
     );

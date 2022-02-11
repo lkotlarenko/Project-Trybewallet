@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 class SelectionField extends React.Component {
   render() {
-    const { name, testid, value, type, onChange, options } = this.props;
+    const { name, testid, value, type, onChange, options, label } = this.props;
     return (
       <label htmlFor={ testid } style={ { textTransform: 'capitalize' } }>
-        {name}
+        {label || name}
         <select
           id={ testid }
           name={ name }
