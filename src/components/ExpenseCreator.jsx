@@ -70,7 +70,7 @@ class ExpenseCreator extends React.Component {
           onChange={ this.handleChange }
         />
         <SelectionField
-          name="currency"
+          name="moeda"
           testid="currency-input"
           value={ currency }
           options={ currencies }
